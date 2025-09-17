@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+@layer utilities {
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .text-30-extrabold {
+    @apply text-[30px] font-extrabold text-white;
+  }
+
+  .text-30-bold {
+    @apply text-[30px] font-bold text-black;
+  }
+
+  .text-30-semibold {
+    @apply font-semibold text-[30px] text-black;
+  }
+
+  .text-26-semibold {
+    @apply font-semibold text-[26px] text-black;
+  }
+
+  .text-24-black {
+    @apply text-[24px] font-black text-black;
+  }
+
+  .text-20-medium {
+    @apply font-medium text-[20px] text-black;
+  }
+
+  .text-16-medium {
+    @apply font-medium text-[16px] text-black;
+  }
+  .no-result {
+    @apply text-black text-sm font-normal;
+  }
+  .heading {
+    @apply uppercase bg-black  px-6 py-3 font-mono font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] w-full text-center my-5;
+  }
+  .red-container {
+    @apply bg-red-300 p-5  w-full  min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
+  }
+  .sub_heading {
+    @apply text-white text-center text-[20px] leading-[30px] font-mono font-semibold mt-5;
+  }
+  .search_form {
+    @apply w-full max-w-[600px] mt-10 flex bg-white rounded-4xl overflow-hidden py-5 px-3 border-black border-4;
+  }
+  .search_input {
+    @apply flex-1 outline-none border-none text-black text-[18px] font-sans;
+  }
+  .search_button {
+    @apply bg-black rounded-full w-12 h-12 flex items-center justify-center;
+  }
+  .section_container {
+    @apply w-full h-full mx-auto px-6 py-10 bg-gray-100 text-black font-mono font-bold text-2xl;
+  }
+  .card_grid {
+    @apply grid md:grid-cols-3 sm:grid-cols-2 gap-5;
+  }
+  .startup-card {
+    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] transition-all duration-500 w-full inline-block;
+  }
+  .startup-card_date {
+    @apply font-medium text-[16px] font-mono bg-red-100 rounded-2xl py-1 px-3;
+  }
+  .startup-card_desc {
+    @apply font-normal text-[16px] line-clamp-2 my-3 text-black break-all;
+  }
+
+  .startup-card_img {
+    @apply w-full h-[164px] rounded-[10px] object-cover;
+  }
+
+  .startup-card_btn {
+    @apply rounded-full bg-black font-medium text-[16px] text-white px-5 py-3;
+  }
+
+  .startup-card_skeleton {
+    @apply w-full h-96 rounded-[22px] bg-zinc-400;
+  }
+  .tag {
+    @apply px-6 py-3 font-mono font-bold rounded-sm uppercase relative text-black bg-amber-300;
+  }
+  .category-tag {
+    @apply font-medium text-[16px] bg-red-100 px-4 py-2 rounded-full;
+  }
+  .divider {
+    @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
+  }
+  .view_skeleton {
+    @apply bg-zinc-400 h-10 w-24 rounded-lg fixed bottom-3 right-3;
+  }
+  .view-container {
+    @apply flex justify-end items-center mt-5 fixed bottom-3 right-3;
+  }
+
+  .view-text {
+    @apply font-medium text-[16px] bg-red-100 px-4 py-2 rounded-lg capitalize;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
