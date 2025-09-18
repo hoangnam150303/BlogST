@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/markdown-it": "^14.1.2",
+    "@uiw/react-md-editor": "^4.0.8",
     "lucide-react": "^0.542.0",
     "markdown-it": "^14.1.0",
     "next": "15.5.0",
